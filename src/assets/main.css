@@ -1,1 +1,27 @@
 @import './base.css';
+
+/* Flexbox */
+.row {
+    display: flex;
+    flex-direction: row;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Typography */
+.text-black-800{
+    color: #333;
+}
+
+/* Borders */
+.rounded-borders-4{
+    border-radius: 4px;
+}
+
+/* Padding */
+.pb-16{
+    padding-bottom: 16px;
+}
