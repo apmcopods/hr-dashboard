@@ -1,6 +1,6 @@
 <script setup>
 import { ref } from 'vue';
-import InputText from '../components/common/inputs/InputText.vue';
+import InputText from '@/components/common/inputs/InputText.vue';
 import { computed } from '@vue/reactivity';
 
 const isLoginMode = ref(true);
