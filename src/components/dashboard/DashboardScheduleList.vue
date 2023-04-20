@@ -7,7 +7,11 @@ defineProps({
         default: []
     },
     title: String,
-    bottomText: String
+    bottomText: String,
+    showPin: {
+        type: Boolean,
+        default: true
+    }
 });
 
 </script>
@@ -18,11 +22,11 @@ defineProps({
             {{ title }}
             <input type="date" class="border-lightgrey rounded-borders-4" />
         </div>
-        <div class="list px-20">
+        <div class="list overflow-y-scroll px-20">
             <div v-for="item in values" :key="item.id" class="column gap-8 mb-8">
                 <div v-if="item.label" class="label">{{ item.label }}</div>
-                <DashboardScheduleListItem v-for="listItem in item" :key="listItem.id"
-                    message="Outing schedule for every department" time="5 minutes ago" />
+                <DashboardScheduleListItem v-for="listItem in item.data" :key="listItem.id" :message="listItem.message"
+                    :time="listItem.time" :show-pin="showPin" />
             </div>
         </div>
         <div class="bottom-text pa-10 cursor-pointer font-poppins">
@@ -56,6 +60,7 @@ input {
 
 .list {
     border-bottom: 1px solid #E0E0E0;
+    max-height: 320px;
 }
 
 .bottom-text {

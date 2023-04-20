@@ -20,7 +20,7 @@ const redirectionLinkText = computed(() => isLoginMode.value ? 'Sign up now' : '
 <template>
     <div class="row">
         <img src="/boat.png" class="left-section" />
-        <div class="right-section column justify-between">
+        <div class="right-section column justify-between overflow-y-scroll">
             <form class="column ma-48">
                 <div class="logo mx-auto">WeHR</div>
                 <h3 class="mt-60 mb-24 tagline font-poppins">{{ tagline }}</h3>
@@ -55,20 +55,6 @@ const redirectionLinkText = computed(() => isLoginMode.value ? 'Sign up now' : '
 .right-section {
     width: 35%;
     max-height: 100vh;
-    overflow-y: scroll;
-}
-
-/* Hide scrollbar for Chrome, Safari and Opera */
-.right-section::-webkit-scrollbar {
-    display: none;
-}
-
-/* Hide scrollbar for IE, Edge and Firefox */
-.right-section {
-    -ms-overflow-style: none;
-    /* IE and Edge */
-    scrollbar-width: none;
-    /* Firefox */
 }
 
 .logo {
