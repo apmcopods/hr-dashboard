@@ -9,31 +9,31 @@ const menu = [
         menuOptions: [
             {
                 id: 2,
-                lable: 'Dashboard',
+                label: 'Dashboard',
                 icon: '/dashboard.svg',
                 route: '/'
             },
             {
                 id: 3,
-                lable: 'Recruitment',
+                label: 'Recruitment',
                 icon: '/recruitment.svg',
                 route: '/recruitment'
             },
             {
                 id: 4,
-                lable: 'Schedule',
+                label: 'Schedule',
                 icon: '/calendar.svg',
                 route: '/calendar'
             },
             {
                 id: 5,
-                lable: 'Employee',
+                label: 'Employee',
                 icon: '/employee.svg',
                 route: '/employee'
             },
             {
                 id: 6,
-                lable: 'Department',
+                label: 'Department',
                 icon: '/department.svg',
                 route: '/department'
             },
@@ -45,13 +45,13 @@ const menu = [
         menuOptions: [
             {
                 id: 8,
-                lable: 'Support',
+                label: 'Support',
                 icon: '/support.svg',
                 route: '/support'
             },
             {
                 id: 9,
-                lable: 'Settings',
+                label: 'Settings',
                 icon: '/settings.svg',
                 route: '/settings'
             },
@@ -65,7 +65,7 @@ const route = useRoute();
 
 <template>
     <div class="container column py-20">
-        <div class="logo font-poppins pa-10 mb-48 mx-auto">
+        <div class="logo-black font-poppins pa-10 mb-48 mx-auto">
             WeHR
         </div>
         <div class="column align-start gap-40">
@@ -75,7 +75,7 @@ const route = useRoute();
                     class="menu row align-center gap-24 py-16 pl-30 cursor-pointer"
                     :class="{ active: menuOption.route === route.fullPath }">
                     <img :src="menuOption.icon" />
-                    <div class="menu-label">{{ menuOption.lable }}</div>
+                    <div class="menu-label">{{ menuOption.label }}</div>
                 </div>
             </div>
         </div>
@@ -89,7 +89,7 @@ const route = useRoute();
     background: #DEDEDE;
 }
 
-.logo {
+.logo-black {
     font-weight: 600;
     font-size: 36px;
     line-height: 42px;
@@ -121,5 +121,41 @@ const route = useRoute();
 .menu:not(.active):hover {
     background: #FF5151;
     color: white;
+}
+
+@media screen and (max-width: 834px) and (min-width: 391px) {
+    .container {
+        width: 90px;
+        padding-top: 41px;
+    }
+
+    .logo-black {
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 42px;
+        padding: 0;
+        margin-bottom: 40px;
+    }
+
+    .menu {
+        padding: 20px 0px;
+        justify-content: center;
+    }
+
+    .menu-label {
+        display: none;
+    }
+
+    .menu-header {
+        padding: 0px;
+        margin: 0;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 390px) {
+    .container {
+        display: none;
+    }
 }
 </style>
