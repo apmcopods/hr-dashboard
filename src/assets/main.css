@@ -16,6 +16,9 @@
 .gap-10 {
   gap: 10px;
 }
+.gap-24 {
+  gap: 24px;
+}
 
 .justify-center {
   justify-content: center;
@@ -47,8 +50,14 @@
 .border-grey {
   border: 1px solid #e0e0e0;
 }
+.border-\.5 {
+  border-width: 0.5px;
+}
 .rounded-borders-4 {
   border-radius: 4px;
+}
+.rounded-borders-6 {
+  border-radius: 6px;
 }
 .rounded-borders-10 {
   border-radius: 10px;
@@ -86,6 +95,11 @@
   padding-bottom: 12px;
 }
 
+.px-16 {
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
 /* Margin */
 .ma-48 {
   margin: 48px;
@@ -113,6 +127,9 @@
 .mb-4 {
   margin-bottom: 4px;
 }
+.mb-6 {
+  margin-bottom: 6px;
+}
 .mb-16 {
   margin-bottom: 16px;
 }
@@ -138,6 +155,7 @@
   margin-top: 32px;
   margin-bottom: 32px;
 }
+
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
