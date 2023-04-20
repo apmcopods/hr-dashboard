@@ -1,0 +1,125 @@
+<script setup>
+import { useRoute } from 'vue-router';
+
+
+const menu = [
+    {
+        id: 1,
+        header: 'MAIN MENU',
+        menuOptions: [
+            {
+                id: 2,
+                lable: 'Dashboard',
+                icon: '/dashboard.svg',
+                route: '/'
+            },
+            {
+                id: 3,
+                lable: 'Recruitment',
+                icon: '/recruitment.svg',
+                route: '/recruitment'
+            },
+            {
+                id: 4,
+                lable: 'Schedule',
+                icon: '/calendar.svg',
+                route: '/calendar'
+            },
+            {
+                id: 5,
+                lable: 'Employee',
+                icon: '/employee.svg',
+                route: '/employee'
+            },
+            {
+                id: 6,
+                lable: 'Department',
+                icon: '/department.svg',
+                route: '/department'
+            },
+        ]
+    },
+    {
+        id: 7,
+        header: 'OTHER',
+        menuOptions: [
+            {
+                id: 8,
+                lable: 'Support',
+                icon: '/support.svg',
+                route: '/support'
+            },
+            {
+                id: 9,
+                lable: 'Settings',
+                icon: '/settings.svg',
+                route: '/settings'
+            },
+        ]
+    },
+];
+
+const route = useRoute();
+
+</script>
+
+<template>
+    <div class="container column py-20">
+        <div class="logo font-poppins pa-10 mb-48 mx-auto">
+            WeHR
+        </div>
+        <div class="column align-start gap-40">
+            <div v-for="section in menu" :key="section.id" class="full-width">
+                <div class="menu-header my-10 pl-30"> {{ section.header }} </div>
+                <div v-for="menuOption in section.menuOptions" :id="menuOption.id"
+                    class="menu row align-center gap-24 py-16 pl-30 cursor-pointer"
+                    :class="{ active: menuOption.route === route.fullPath }">
+                    <img :src="menuOption.icon" />
+                    <div class="menu-label">{{ menuOption.lable }}</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
+
+<style scoped>
+.container {
+    height: 100vh;
+    width: 242px;
+    background: #DEDEDE;
+}
+
+.logo {
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 42px;
+    color: #000;
+}
+
+.menu-header {
+    font-family: 'Roboto';
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+    color: #686868;
+    opacity: 0.5;
+}
+
+.menu.active {
+    cursor: default;
+}
+
+.menu.active .menu-label {
+    color: #FF5151;
+}
+
+.menu:not(.active):hover {
+    background: #FF5151;
+    color: white;
+}
+
+.menu:not(.active):hover {
+    background: #FF5151;
+    color: white;
+}
+</style>

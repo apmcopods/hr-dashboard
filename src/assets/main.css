@@ -22,6 +22,9 @@
 .gap-36 {
   gap: 36px;
 }
+.gap-40 {
+  gap: 40px;
+}
 
 .justify-center {
   justify-content: center;
@@ -32,6 +35,9 @@
 
 .align-center {
   align-items: center;
+}
+.align-start {
+  align-items: flex-start;
 }
 .align-self-end {
   align-self: end;
@@ -94,6 +100,9 @@
 .pl-24 {
   padding-left: 24px;
 }
+.pl-30 {
+  padding-left: 30px;
+}
 
 .pr-12 {
   padding-right: 12px;
@@ -109,6 +118,10 @@
 .py-12 {
   padding-top: 12px;
   padding-bottom: 12px;
+}
+.py-16 {
+  padding-top: 16px;
+  padding-bottom: 16px;
 }
 .py-20 {
   padding-top: 20px;
@@ -172,6 +185,9 @@
 }
 .mb-32 {
   margin-bottom: 32px;
+}
+.mb-48 {
+  margin-bottom: 48px;
 }
 
 .my-6 {
@@ -256,4 +272,8 @@ hr {
   font-size: 36px;
   line-height: 42px;
   color: #ff5151;
+}
+
+.full-width {
+  width: 100%;
 }
