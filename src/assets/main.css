@@ -19,6 +19,9 @@
 .gap-24 {
   gap: 24px;
 }
+.gap-36 {
+  gap: 36px;
+}
 
 .justify-center {
   justify-content: center;
@@ -145,6 +148,10 @@
   margin-top: 60px;
 }
 
+.mr-8 {
+  margin-right: 8px;
+}
+
 .mb-4 {
   margin-bottom: 4px;
 }
@@ -171,6 +178,10 @@
   margin-top: 6px;
   margin-bottom: 6px;
 }
+.my-10 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
 .my-16 {
   margin-top: 16px;
   margin-bottom: 16px;
@@ -183,6 +194,10 @@
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
+}
+.mx-16 {
+  margin-left: 16px;
+  margin-right: 16px;
 }
 
 /* Link */
