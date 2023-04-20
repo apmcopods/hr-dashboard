@@ -2,16 +2,25 @@
 import IconPin from '../icons/IconPin.vue';
 import IconMenuDots from '../icons/IconMenuDots.vue';
 
+defineProps({
+    message: String,
+    time: String,
+    showPin: {
+        type: Boolean,
+        default: true
+    }
+})
+
 </script>
 
 <template>
     <div class="container row justify-between border-grey border-.5 rounded-borders-6 py-12 px-16">
         <div>
-            <div class="message font-poppins mb-6">Outing schedule for every department</div>
-            <div class="time">5 minutes ago</div>
+            <div class="message font-poppins mb-6">{{ message }}</div>
+            <div class="time">{{ time }}</div>
         </div>
         <div class="actions row align-center gap-24">
-            <IconPin />
+            <IconPin v-if="showPin" />
             <IconMenuDots />
         </div>
     </div>
