@@ -66,5 +66,13 @@ input {
 .bottom-text {
     color: #FF5151;
     text-align: center;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+@media screen and (max-width: 834px) {
+    .list {
+        max-height: 215px;
+    }
 }
 </style>

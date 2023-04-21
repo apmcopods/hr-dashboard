@@ -2,7 +2,9 @@
 import { ref } from 'vue';
 import InputText from '@/components/common/inputs/InputText.vue';
 import { computed } from '@vue/reactivity';
+import { useRouter } from 'vue-router';
 
+const router = useRouter();
 const isLoginMode = ref(true);
 const name = ref("")
 const email = ref("");
@@ -14,6 +16,10 @@ const googleBtnText = computed(() => `Or sign ${isLoginMode.value ? 'in' : 'up'}
 const redirectionText = computed(() => isLoginMode.value ? 'Don\'t have an account?' : 'Already have an account?');
 const redirectionLinkText = computed(() => isLoginMode.value ? 'Sign up now' : 'Sign in now');
 
+function login(e) {
+    e.preventDefault();
+    router.push({ name: 'dashboard' });
+}
 
 </script>
 
@@ -21,7 +27,7 @@ const redirectionLinkText = computed(() => isLoginMode.value ? 'Sign up now' : '
     <div class="row">
         <img src="/boat.png" class="left-section" />
         <div class="right-section column justify-between overflow-y-scroll">
-            <form class="column ma-48">
+            <form class="column ma-48" @submit="login">
                 <div class="logo mx-auto">WeHR</div>
                 <h3 class="mt-60 mb-24 tagline font-poppins">{{ tagline }}</h3>
                 <InputText v-model="name" v-if="!isLoginMode" label="Name" placeholder="Enter name" :required="true"

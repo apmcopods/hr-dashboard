@@ -11,18 +11,14 @@ defineProps({
 </script>
 
 <template>
-    <div :data-type="type" class="container py-12 pl-20 pr-12 rounded-borders-10">
-        <div class="title font-poppins">{{ title }}</div>
+    <div :data-type="type" class="container column py-12 pl-20 pr-12 rounded-borders-10">
+        <div class="title font-poppins col">{{ title }}</div>
         <div class="count my-16">{{ count }}</div>
         <div class="bottom-text">{{ subtitle }}</div>
     </div>
 </template>
 
 <style scoped>
-.container {
-    max-width: 204px;
-}
-
 .container[data-type='needed'] {
     background: #FFEFE7;
 }

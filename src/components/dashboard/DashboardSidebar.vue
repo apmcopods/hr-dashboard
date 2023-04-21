@@ -85,7 +85,6 @@ const route = useRoute();
 <style scoped>
 .container {
     height: 100vh;
-    width: 242px;
     background: #DEDEDE;
 }
 
@@ -125,7 +124,6 @@ const route = useRoute();
 
 @media screen and (max-width: 834px) and (min-width: 391px) {
     .container {
-        width: 90px;
         padding-top: 41px;
     }
 
@@ -153,9 +151,5 @@ const route = useRoute();
     }
 }
 
-@media screen and (max-width: 390px) {
-    .container {
-        display: none;
-    }
-}
+@media screen and (max-width: 390px) {}
 </style>

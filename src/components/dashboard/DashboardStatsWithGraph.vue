@@ -13,8 +13,8 @@ defineProps({
 </script>
 
 <template>
-    <div class="container row align-center gap-10 pa-20 border-grey rounded-borders-10">
-        <div class="left-column">
+    <div class="row align-center gap-10 pa-20 border-grey rounded-borders-10">
+        <div class="left-column col">
             <div class="title">{{ title }}</div>
             <div class="count font-rubik mt-8 mb-16">{{ count }}</div>
             <div class="count-gender mb-4">{{ menCount }} Men</div>
@@ -28,10 +28,6 @@ defineProps({
 </template>
 
 <style scoped>
-.container {
-    max-width: 324px;
-}
-
 .title {
     font-family: 'Poppins';
     font-weight: 500;

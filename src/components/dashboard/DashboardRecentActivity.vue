@@ -1,7 +1,7 @@
 <script setup></script>
 
 <template>
-    <div class="container rounded-borders-10">
+    <div class="container rounded-borders-10 column">
         <div class="header pl-20 pr-10 py-10 font-poppins">Recent Activity</div>
         <div class="body">
             <div class="time">10.40 AM, Fri 10 Sept 2021</div>
@@ -42,16 +42,18 @@
 .time,
 .content {
     font-family: 'Roboto';
-    font-weight: 500;
-    font-size: 10px;
-    line-height: 12px;
 }
 
 .time {
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 12px;
     opacity: 0.6;
 }
 
 .content {
+    font-size: 14px;
+    line-height: 20px;
     opacity: 0.8;
 }
 
@@ -61,5 +63,13 @@
 
 button {
     background: #FF5151;
+}
+
+@media screen and (max-width: 834px) {
+
+    .footer {
+        flex-wrap: wrap;
+        margin-top: auto;
+    }
 }
 </style>

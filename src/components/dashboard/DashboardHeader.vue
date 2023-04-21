@@ -1,5 +1,6 @@
 <script setup>
 import IconBell from '../icons/IconBell.vue';
+import IconBurger from '../icons/IconBurger.vue';
 import IconChevronDown from '../icons/IconChevronDown.vue';
 import IconMessage from '../icons/IconMessage.vue';
 import IconSearch from '../icons/IconSearch.vue';
@@ -8,10 +9,12 @@ import IconSearch from '../icons/IconSearch.vue';
 
 <template>
     <div class="header row align-center justify-between">
+        <IconBurger class="mobile-and-tablet-only" />
         <div class="input-container row justify-between align-center px-16 py-10 rounded-borders-4">
             <input placeholder="Search" class="mr-8" />
             <IconSearch />
         </div>
+        <IconSearch class="mobile-only" />
         <div class="row align-center gap-36">
             <IconBell :show-badge="true" />
             <IconMessage />
@@ -26,7 +29,9 @@ import IconSearch from '../icons/IconSearch.vue';
 
 <style scoped>
 .header {
-    padding: 24px 50px;
+    padding: 24px 50px 24px 0px;
+    margin-left: 50px;
+    border-bottom: 1px solid #F1F1F1;
 }
 
 .input-container {
@@ -43,5 +48,42 @@ input {
 
 .avatar {
     border-radius: 100%;
+}
+
+.mobile-only,
+.mobile-and-tablet-only {
+    display: none;
+}
+
+
+@media screen and (max-width: 834px) and (min-width: 391px) {
+    .input-container {
+        min-width: 245px;
+    }
+
+    .header {
+        padding-left: 12px;
+        margin-left: 0px;
+    }
+
+    .mobile-and-tablet-only {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 390px) {
+    .input-container {
+        display: none;
+    }
+
+    .header {
+        padding-left: 12px;
+        margin-left: 0px;
+    }
+
+    .mobile-only,
+    .mobile-and-tablet-only {
+        display: block;
+    }
 }
 </style>
