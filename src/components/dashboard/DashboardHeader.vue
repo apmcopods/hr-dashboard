@@ -9,18 +9,20 @@ import IconSearch from '../icons/IconSearch.vue';
 
 <template>
     <div class="header row align-center justify-between">
-        <IconBurger class="mobile-and-tablet-only" />
-        <div class="input-container row justify-between align-center px-16 py-10 rounded-borders-4">
-            <input placeholder="Search" class="mr-8" />
-            <IconSearch />
+        <div class="row align-center gap-16">
+            <IconBurger class="mobile-and-tablet-only" />
+            <div class="input-container row justify-between align-center px-16 py-10 rounded-borders-4">
+                <input placeholder="Search" class="mr-8" />
+                <IconSearch />
+            </div>
+            <IconSearch class="mobile-only" />
         </div>
-        <IconSearch class="mobile-only" />
         <div class="row align-center gap-36">
             <IconBell :show-badge="true" />
             <IconMessage />
             <div class="row align-center gap-10">
                 <img src="/avatar.png" class="avatar" />
-                <div>Admirra John</div>
+                <div class="username">Admirra John</div>
                 <IconChevronDown />
             </div>
         </div>
@@ -55,34 +57,43 @@ input {
     display: none;
 }
 
+@media screen and (max-width: 1028px) {
+    .username {
+        display: none;
+    }
 
-@media screen and (max-width: 834px) and (min-width: 391px) {
     .input-container {
         min-width: 245px;
+    }
+}
+
+@media screen and (max-width: 834px) {
+    .input-container {
+        min-width: 120px;
     }
 
     .header {
         padding-left: 12px;
+        padding-right: 24px;
         margin-left: 0px;
     }
+
 
     .mobile-and-tablet-only {
         display: block;
     }
 }
 
-@media screen and (max-width: 390px) {
+@media screen and (max-width: 640px) {
     .input-container {
         display: none;
     }
 
     .header {
-        padding-left: 12px;
-        margin-left: 0px;
+        padding-right: 12px;
     }
 
-    .mobile-only,
-    .mobile-and-tablet-only {
+    .mobile-only {
         display: block;
     }
 }
