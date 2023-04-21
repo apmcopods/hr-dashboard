@@ -97,4 +97,32 @@ function login(e) {
     line-height: 16px;
     color: #666;
 }
+
+@media screen and (max-width: 1024px) {
+    .left-section {
+        width: 45%;
+    }
+
+    .right-section {
+        width: 55%;
+    }
+
+    .right-section>form {
+        margin: 24px;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .left-section {
+        display: none;
+    }
+
+    .right-section {
+        width: 100%;
+    }
+
+    .right-section>form {
+        margin: 12px;
+    }
+}
 </style>
