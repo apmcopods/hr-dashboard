@@ -125,7 +125,7 @@ const scheduleList = [
                             :title="stat.title" :count="stat.count" :subtitle="stat.subtitle"
                             class="dashboard-stat-colored col" />
                     </div>
-                    <div class="dashboard-stats-graph-container row justify-between my-20">
+                    <div class="dashboard-stats-graph-container row justify-between my-20 wrap">
                         <DashboardStatsWithGraph v-for="stat in graphStats" :key="stat.id" :title="stat.title"
                             :count="stat.count" :men-count="stat.menCount" :women-count="stat.womenCount"
                             :percentage-value="stat.percentageValue" class="dashboard-stat-graph col" />
@@ -134,9 +134,9 @@ const scheduleList = [
                         class="dashboard-announcement" />
                 </div>
                 <div class="dashboard-content-right column gap-20">
-                    <DashboardRecentActivity class="recent-activity" />
+                    <DashboardRecentActivity class="recent-activity col" />
                     <DashboardScheduleList :values="scheduleList" title="Upcoming schedule"
-                        bottom-text="Create a New Schedule" class="dashboard-schedule" />
+                        bottom-text="Create a New Schedule" class="dashboard-schedule col" />
                 </div>
             </div>
 
@@ -184,17 +184,30 @@ const scheduleList = [
     line-height: 42px;
 }
 
-@media screen and (max-width: 834px) {
+@media screen and (max-width: 1024px) and (min-width: 941px) {
+    .dashboard-stats-colored-container {
+        flex-wrap: wrap;
+    }
+
+    .dashboard-stat-colored {
+        flex-wrap: wrap;
+        flex: unset;
+        width: 100%;
+    }
+
+}
+
+@media screen and (max-width: 940px) {
     .sidebar {
         width: 90px;
         min-width: 90px;
     }
 
-    .dashboard-stats-colored-container,
     .dashboard-stats-graph-container,
     .dashboard-content {
         flex-wrap: wrap;
     }
+
 
     .dashboard-content-left {
         width: 100%;
@@ -208,9 +221,35 @@ const scheduleList = [
     }
 }
 
+@media screen and (max-width: 820px) {
+    .dashboard-content-right {
+        flex-wrap: wrap;
+        flex-direction: row-reverse;
+    }
+
+    .recent-activity,
+    .dashboard-schedule {
+        flex: unset;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .dashboard-stats-colored-container {
+        flex-wrap: wrap;
+    }
+
+    .dashboard-stat-colored {
+        flex: unset;
+        width: 100%;
+    }
+
+}
+
 @media screen and (max-width: 390px) {
     .sidebar {
         display: none;
     }
+
 }
 </style>

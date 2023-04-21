@@ -67,7 +67,7 @@ input {
     }
 }
 
-@media screen and (max-width: 834px) {
+@media screen and (max-width: 940px) {
     .input-container {
         min-width: 120px;
     }

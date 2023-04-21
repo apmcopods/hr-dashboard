@@ -85,7 +85,7 @@ const route = useRoute();
 <style scoped>
 .container {
     height: 100vh;
-    background: #DEDEDE;
+    background: #FAFAFA;
 }
 
 .logo-black {
@@ -122,7 +122,7 @@ const route = useRoute();
     color: white;
 }
 
-@media screen and (max-width: 834px) and (min-width: 391px) {
+@media screen and (max-width: 940px) and (min-width: 391px) {
     .container {
         padding-top: 41px;
     }

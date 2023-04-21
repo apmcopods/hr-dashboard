@@ -19,7 +19,6 @@
 .container {
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), #161E54;
     color: white;
-    max-width: 424px;
 }
 
 .header {
@@ -65,7 +64,7 @@ button {
     background: #FF5151;
 }
 
-@media screen and (max-width: 834px) {
+@media screen and (max-width: 940px) {
 
     .footer {
         flex-wrap: wrap;

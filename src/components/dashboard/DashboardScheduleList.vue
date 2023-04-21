@@ -18,7 +18,7 @@ defineProps({
 
 <template>
     <div class="border-grey rounded-borders-12">
-        <div class="header font-poppins row justify-between pt-16 px-20 mb-16">
+        <div class="header font-poppins row justify-between gap-8 align-center pt-16 px-20 mb-16">
             {{ title }}
             <input type="date" class="border-lightgrey rounded-borders-4" />
         </div>
@@ -70,7 +70,7 @@ input {
     line-height: 20px;
 }
 
-@media screen and (max-width: 834px) {
+@media screen and (max-width: 940px) {
     .list {
         max-height: 215px;
     }
